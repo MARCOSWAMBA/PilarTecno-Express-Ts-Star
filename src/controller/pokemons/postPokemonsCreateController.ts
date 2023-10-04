@@ -1,5 +1,4 @@
 import { Response, Request } from 'express';
-import pokemonData from '../../data/pokemon.json';
 
 export async function postPokemonsCreate(req: Request, res: Response) {
   const { id, name, type, base_experience } = req.body;
