@@ -1,6 +1,5 @@
 import express from 'express';
-import { router as pokemonsRouter } from './router/pokemonsRouter';
-import { router as digimonsRouter } from './router/digimonsRouter';
+import { router as starsRouter } from './router/startRoutes';
 import { logger } from './middleware/loggerMiddleware';
 import { errorHandler } from './middleware/erroHandler';
 
@@ -10,8 +9,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use('*', logger);
 
-app.use('/pokemons', pokemonsRouter);
-app.use('/digimons', digimonsRouter);
+app.use('/stars', starsRouter);
 
 app.use(errorHandler);
 
